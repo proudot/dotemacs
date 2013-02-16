@@ -1,0 +1,10 @@
+;;;; Emacs Bookmark Format Version 1 ;;;;
+;;; This format is meant to be slightly human-readable;
+;;; nevertheless, you probably don't want to edit it.
+;;; -*- End Of Bookmark File Format Version Stamp -*-
+(("fluo_simulator.hpp"
+ (filename . "~/code/serpicodev/flimtrack/include/fluo_simulator.hpp")
+ (front-context-string . "	cfl warping_vec")
+ (rear-context-string . "is_empty()){\n			")
+ (position . 2292))
+)

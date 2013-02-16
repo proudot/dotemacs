@@ -1,0 +1,3 @@
+#name : inline float get_var();{return var}
+# --
+inline ${1:float} get_${2:var}(){return $2;};

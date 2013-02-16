@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: print
+# key: cout
+# --
+cout << "$1 :" << $1 << endl;

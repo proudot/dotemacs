@@ -1,0 +1,8 @@
+# -*- mode: c++-mode -*-
+#name : C++ source file license
+# --
+//
+// Copyright (C) `(format-time-string "%Y" (current-time))` Bueller? Bueller?
+//
+// $Id$
+//

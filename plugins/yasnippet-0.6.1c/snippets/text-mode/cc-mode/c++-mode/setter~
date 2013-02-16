@@ -1,0 +1,3 @@
+#name : inline void set_${1:var}(${2:float} val ){$1=val;};
+# --
+inline void set_${1:var}(${2:float} val ){$1=val;};
