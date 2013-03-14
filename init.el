@@ -6,6 +6,46 @@
 (add-to-list 'load-path "~/.emacs.d/elpa/frame-bufs/")
 (add-to-list 'load-path "~/.emacs.d/plugins/matlab-emacs")
 
+;;;;;;;;;;;;;;;;;;;;;;;
+;; Platform specific ;;
+;;;;;;;;;;;;;;;;;;;;;;;
+
+;; Linux
+
+;; (setq x-select-enable-clipboard t)
+;; (setq interprogram-paste-function 'x-cut-buffer-or-selection-value)
+;; Frame size
+;; (setq default-frame-alist
+;;       '((top . 0) (left . 500)
+;;         (width . 90) (height . 73)
+;;         (font . "menlo-12")
+;;         )
+;; 			)
+
+;; Mac osx
+
+;; Frame size
+(setq default-frame-alist
+      '((top . 0) (left . 500)
+        (width . 90) (height . 73)
+        (font . "Menlo-12")
+        )
+			)
+
+;; MacOSX stuff
+(setenv "PATH" (concat (getenv "PATH") ":/usr/texbin/:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/X11/bin:."))
+(setq exec-path (append exec-path '("/usr/texbin/:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/X11/bin:.")))
+
+(setq mac-command-modifier 'meta)
+(setq mac-option-modifier nil)
+
+(defun set-exec-path-from-shell-PATH ()
+  (let ((path-from-shell
+				 (replace-regexp-in-string "[[:space:]\n]*$" ""
+																	 (shell-command-to-string "$SHELL -l -c 'echo $PATH'"))))
+    (setenv "PATH" path-from-shell)
+    (setq exec-path (split-string path-from-shell path-separator))))
+(when (equal system-type 'darwin) (set-exec-path-from-shell-PATH))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Fundamental mode related (every mode) ;;
@@ -13,8 +53,6 @@
 (require 'uniquify)
 (setq uniquify-buffer-name-style 'reverse)
 
-(setq x-select-enable-clipboard t)
-(setq interprogram-paste-function 'x-cut-buffer-or-selection-value)
 
 (tool-bar-mode -1)
 
@@ -102,14 +140,6 @@
     (isearch-repeat (if isearch-forward 'forward))
     (ad-enable-advice 'isearch-search 'after 'isearch-no-fail)
     (ad-activate 'isearch-search)))
-																	
-;; Frame size
-(setq default-frame-alist
-      '((top . 0) (left . 500)
-        (width . 90) (height . 73)
-        (font . "monospace-8")
-        )
-			)
 
 
 ;; MacOSX stuff
@@ -197,9 +227,9 @@
 ;; (auto-complete-mode t)
 
 ;; Pager
-(require 'pager)
-(global-set-key "\C-v"     'pager-page-down)
-(global-set-key "\M-v"      'pager-page-up)
+;; (require 'pager)
+;; (global-set-key "\C-v"     'pager-page-down)
+;; (global-set-key "\M-v"      'pager-page-up)
 
 (require 'frame-bufs)
 (frame-bufs-mode t)
@@ -363,16 +393,14 @@ directory and insert a link to this file."
 (setq org-attach-store-link-p 'attached)
 (global-set-key (kbd "C-c l") 'org-store-link)
 (setq org-file-apps
-                   '(
-;;                             ("\\.tiff\\'" . default)
-;;                             ("\\.tif\\'" . default)
-                             ;; ("\\.png\\'" . default)
-                             ;; ("\\.pdf\\'" . default)
-;;														 (system . "gnome-open %s")
-										 (t . "nautilus %s")
-										 (auto-mode . "nautilus %s")
-										 ) 
-									 )
+			'(
+				("\\.tiff\\'" . default)
+				("\\.tif\\'" . default)
+				("\\.png\\'" . default)
+				("\\.pdf\\'" . default)
+				(auto-mode . default)
+				)
+			x)
 
 (setq org-refile-targets '((nil :maxlevel . 2)
 																				; all top-level headlines in the
@@ -467,7 +495,7 @@ directory and insert a link to this file."
 (setq comint-move-point-for-output t)
 
 
-;; Aspell 
+;; Aspell
 
 ;; It works!  It works!  After two hours of slogging, it works!
 (setq ispell-program-name "aspell")
