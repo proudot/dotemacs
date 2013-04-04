@@ -212,19 +212,26 @@
 
 
 ;; Complete with tab !!
-(require 'smart-tab)
-(global-smart-tab-mode 1)
-(setq smart-tab-using-hippie-expand t)
-(setq smart-tab-disabled-major-modes '(org-mode term-mode eshell-mode debugger-mode matlab-shell-mode shell-mode))
+;; (require 'smart-tab)
+;; (global-smart-tab-mode 1)
+;; (setq smart-tab-using-hippie-expand t)
+;; (setq smart-tab-disabled-major-modes '(org-mode term-mode eshell-mode debugger-mode matlab-shell-mode shell-mode))
 
 ;; An other minor mode for auto-completion...
-;; (require 'auto-complete-config)
-;; (add-to-list 'ac-dictionary-directories "~/.emacs.d//ac-dict")
-;; (ac-config-default)
-;; (setq ac-sources '(ac-source-symbols ac-source-words-in-all-buffers))
+(require 'auto-complete-config) 
+;;(add-to-list 'ac-dictionary-directories "~/.emacs.d//ac-dict")
+;;(ac-config-default)
+(setq-default ac-sources '( ac-source-words-in-buffer ac-source-filename))
+;; (setq-default ac-sources '(ac-source-abbrev ac-source-words-in-same-mode-buffers ac-source-words-in-buffer  ac-source-symbols ))
 ;; (ac-set-trigger-key nil)
 ;; (setq ac-auto-start t)
-;; (auto-complete-mode t)
+(global-auto-complete-mode t)
+(defun auto-complete-mode-maybe ()
+  "No maybe for you. Only AC!"
+  (unless (minibufferp (current-buffer))
+    (auto-complete-mode 1)))
+
+
 
 ;; Pager
 ;; (require 'pager)
@@ -415,17 +422,17 @@ directory and insert a link to this file."
        '(("+" . "-") ("-" . "*") ("*" . "+")))
 (setq org-M-RET-may-split-line nil)
 
-;; (org-babel-do-load-languages
-;;  'org-babel-load-languages
-;;  '((emacs-lisp . t)
-;; 	 (latex . t)
-;; 	 (gnuplot . t)
-;; 	 (C . t)
-;; 	 (sh .t)
-;; 	 (plantuml . t)
-;; 	 (python . t)
-;; 	 )
-;;  )
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ '((emacs-lisp . t)
+	 (latex . t)
+	 (gnuplot . t)
+	 (C . t)
+	 (sh .t)
+	 (plantuml . t)
+	 (python . t)
+	 )
+ )
 
 (setq org-plantuml-jar-path
       (expand-file-name "~/logiciel/plantuml.jar"))
