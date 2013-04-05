@@ -13,8 +13,8 @@
 (require 'uniquify)
 (setq uniquify-buffer-name-style 'reverse)
 
-(setq x-select-enable-clipboard t)
-(setq interprogram-paste-function 'x-cut-buffer-or-selection-value)
+;; (setq x-select-enable-clipboard t)
+;; (setq interprogram-paste-function 'x-cut-buffer-or-selection-value)
 
 (tool-bar-mode -1)
 
@@ -107,7 +107,7 @@
 (setq default-frame-alist
       '((top . 0) (left . 500)
         (width . 90) (height . 73)
-        (font . "monospace-8")
+        (font . "menlo-12")
         )
 			)
 
@@ -117,8 +117,8 @@
 (setenv "PATH" (concat (getenv "PATH") ":/usr/texbin/:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/X11/bin:."))
 (setq exec-path (append exec-path '("/usr/texbin/:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/X11/bin:.")))
 
-;; (setq mac-command-modifier 'meta)
-;; (setq mac-option-modifier nil)
+(setq mac-command-modifier 'meta)
+(setq mac-option-modifier nil)
 
 (defun set-exec-path-from-shell-PATH ()
   (let ((path-from-shell
@@ -306,16 +306,16 @@
 (set-cursor-color "green")
 
 (custom-set-variables
-  ;; custom-set-variables was added by Custom.
-  ;; If you edit it by hand, you could mess it up, so be careful.
-  ;; Your init file should contain only one such instance.
-  ;; If there is more than one, they won't work right.
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
  '(ansi-color-names-vector ["#2e3436" "#a40000" "#4e9a06" "#c4a000" "#204a87" "#5c3566" "#729fcf" "#eeeeec"])
  '(blink-cursor-mode t)
  '(comint-input-ignoredups t)
  '(comint-prompt-read-only t)
  '(default-justification (quote full))
- '(doc-view-continuous t)
+ '(doc-view-continuous nil)
  '(eshell-scroll-to-bottom-on-output (quote all))
  '(framepop-enable-keybinding "<f2>")
  '(fringe-mode 5 nil (fringe))
@@ -560,3 +560,9 @@ directory and insert a link to this file."
 ;; (vimpulse-map "k" 'previous-line)
 ;; (vimpulse-map "j" 'next-line)
 ;; (setq-default viper-auto-indent t							)
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
