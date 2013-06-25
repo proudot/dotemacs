@@ -11,9 +11,9 @@
 ;;;;;;;;;;;;;;;;;;;;;;;
 
 ;; Linux
-
 ;; (setq x-select-enable-clipboard t)
 ;; (setq interprogram-paste-function 'x-cut-buffer-or-selection-value)
+
 ;; Frame size
 ;; (setq default-frame-alist
 ;;       '((top . 0) (left . 500)
@@ -50,6 +50,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Fundamental mode related (every mode) ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
 (require 'uniquify)
 (setq uniquify-buffer-name-style 'reverse)
 
@@ -187,6 +188,7 @@
 (global-set-key
  (if (featurep 'xemacs) (kbd "<C-iso-left-tab>") (kbd "<C-S-iso-lefttab>"))
  'iflipb-previous-buffer)
+(set-default 'iflipb-ignore-buffers nil)
 
 
 ;; winner-mode is the window configuration history
@@ -218,13 +220,14 @@
 ;; (setq smart-tab-disabled-major-modes '(org-mode term-mode eshell-mode debugger-mode matlab-shell-mode shell-mode))
 
 ;; An other minor mode for auto-completion...
-(require 'auto-complete-config) 
+(require 'auto-complete-config)
 ;;(add-to-list 'ac-dictionary-directories "~/.emacs.d//ac-dict")
 ;;(ac-config-default)
 (setq-default ac-sources '( ac-source-words-in-buffer ac-source-filename))
 ;; (setq-default ac-sources '(ac-source-abbrev ac-source-words-in-same-mode-buffers ac-source-words-in-buffer  ac-source-symbols ))
 ;; (ac-set-trigger-key nil)
 ;; (setq ac-auto-start t)
+
 (global-auto-complete-mode t)
 (defun auto-complete-mode-maybe ()
   "No maybe for you. Only AC!"
@@ -329,6 +332,28 @@
 (global-set-key (kbd "C-x g") 'prelude-google)
 
 
+;; email in emacs
+(add-to-list 'load-path "~/.emacs.d/mu4e")
+(require 'mu4e)
+
+
+
+;; sending mail -- replace USERNAME with your gmail username
+;; also, make sure the gnutls command line utils are installed
+;; package 'gnutls-bin' in Debian/Ubuntu
+
+(require 'smtpmail)
+;; alternatively, for emacs-24 you can use:
+(setq message-send-mail-function 'smtpmail-send-it
+    smtpmail-stream-type 'starttls
+    smtpmail-default-smtp-server "smtp.inria.fr"
+    smtpmail-smtp-server "smtp.inria.fr"
+		smtpmail-auth-credentials '(("smtp.inria.fr" 25 "proudot" "ifu#eu$a"))
+    smtpmail-smtp-service 25)
+
+
+;; don't keep message buffers around
+(setq message-kill-buffer-on-exit t)
 
 
 ;; CMake
@@ -343,10 +368,10 @@
 (set-cursor-color "green")
 
 (custom-set-variables
-  ;; custom-set-variables was added by Custom.
-  ;; If you edit it by hand, you could mess it up, so be careful.
-  ;; Your init file should contain only one such instance.
-  ;; If there is more than one, they won't work right.
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
  '(ansi-color-names-vector ["#2e3436" "#a40000" "#4e9a06" "#c4a000" "#204a87" "#5c3566" "#729fcf" "#eeeeec"])
  '(blink-cursor-mode t)
  '(comint-input-ignoredups t)
@@ -364,9 +389,10 @@
  '(jabber-alert-presence-hooks nil)
  '(jabber-chat-buffer-show-avatar nil)
  '(jabber-roster-line-format "%c %-25n %u %-8s  %S")
- '(matlab-mode-install-path (quote ("/home/pr120/code/heterogenous_track/matlab_code/" "/home/pr120/code/heterogenous_track/data_analysis/" "/usr/local/MATLAB/R2012a/")))
+ '(matlab-mode-install-path (quote ("~/code/heterogenous_track/common/" "~/code/heterogenous_track/data_analysis/" "/usr/local/MATLAB/R2012a/")))
  '(midnight-mode t nil (midnight))
  '(org-agenda-files (quote ("~/Dropbox/org_files/biblio.org" "~/Dropbox/org_files/these.org" "~/Dropbox/org_files/notes.org")))
+ '(org-blank-before-new-entry (quote ((heading . t) (plain-list-item . auto))))
  '(org-export-latex-classes (quote (("article" "\\documentclass[11pt]{article}" ("\\section{%s}" . "\\section*{%s}") ("\\subsection{%s}" . "\\subsection*{%s}") ("\\subsubsection{%s}" . "\\subsubsection*{%s}") ("\\paragraph{%s}" . "\\paragraph*{%s}") ("\\subparagraph{%s}" . "\\subparagraph*{%s}")) ("report" "\\documentclass[11pt]{report}" ("\\part{%s}" . "\\part*{%s}") ("\\chapter{%s}" . "\\chapter*{%s}") ("\\section{%s}" . "\\section*{%s}") ("\\subsection{%s}" . "\\subsection*{%s}") ("\\subsubsection{%s}" . "\\subsubsection*{%s}")) ("book" "\\documentclass[11pt]{book}" ("\\part{%s}" . "\\part*{%s}") ("\\chapter{%s}" . "\\chapter*{%s}") ("\\section{%s}" . "\\section*{%s}") ("\\subsection{%s}" . "\\subsection*{%s}") ("\\subsubsection{%s}" . "\\subsubsection*{%s}")) ("beamer" "\\documentclass{beamer}" org-beamer-sectioning) ("letter" "\\documentclass[12pt]{lettre}"))))
  '(send-mail-function (quote mailclient-send-it))
  '(show-paren-mode t)
@@ -374,7 +400,9 @@
  '(transient-mark-mode t))
 
 ;; Org Mode
+
 ;; (define-key viper-vi-global-user-map (kbd "C-c /") 'org-sparse-tree)
+;; (setq org-blank-before-new-entry t) ERROR
 (add-hook 'org-mode-hook
 					(lambda ()
 						(local-set-key (kbd "C-c C-h") 'my-screenshot)
@@ -398,6 +426,7 @@ directory and insert a link to this file."
 	)
 
 (setq org-attach-store-link-p 'attached)
+(setq org-highlight-latex-fragments-and-specials t)
 (global-set-key (kbd "C-c l") 'org-store-link)
 (setq org-file-apps
 			'(
@@ -407,7 +436,7 @@ directory and insert a link to this file."
 				("\\.pdf\\'" . default)
 				(auto-mode . default)
 				)
-			x)
+			)
 
 (setq org-refile-targets '((nil :maxlevel . 2)
 																				; all top-level headlines in the
@@ -420,7 +449,7 @@ directory and insert a link to this file."
 
 (setq org-list-demote-modify-bullet
        '(("+" . "-") ("-" . "*") ("*" . "+")))
-(setq org-M-RET-may-split-line nil)
+(setq org-M-RET-may-split-line t)
 
 (org-babel-do-load-languages
  'org-babel-load-languages
@@ -428,7 +457,7 @@ directory and insert a link to this file."
 	 (latex . t)
 	 (gnuplot . t)
 	 (C . t)
-	 (sh .t)
+	 (sh . t)
 	 (plantuml . t)
 	 (python . t)
 	 )
@@ -441,12 +470,14 @@ directory and insert a link to this file."
 
 ;; end Org mode
 
+;; IflipBuffer
 (global-set-key (kbd "<C-tab>") 'iflipb-next-buffer)
 (global-set-key
  (if (featurep 'xemacs) (kbd "<C-iso-left-tab>") (kbd "<C-S-iso-lefttab>"))
  'iflipb-previous-buffer)
 
-;; Gtalk in emacs (sometime usefull but chat is not always updated)
+;; Gtalk in emacs
+;; (sometime usefull but chat is not always updated)
 (require 'jabber)
 (setq tls-program '("openssl s_client -connect %h:%p -no_ssl2 -no_ticket")) ; a hack
 (setq jabber-account-list
@@ -457,7 +488,12 @@ directory and insert a link to this file."
 
 ;; (setq org-default-notes-file (concat org-directory "~/notes.org"))
 
-
+;; eshell
+(require 'eshell)
+(require 'em-smart)
+(setq eshell-where-to-jump 'begin)
+(setq eshell-review-quick-commands nil)
+(setq eshell-smart-space-goes-to-end t)
 
 
 ;; (defun shell-compile ()
@@ -595,3 +631,10 @@ directory and insert a link to this file."
 ;; (vimpulse-map "k" 'previous-line)
 ;; (vimpulse-map "j" 'next-line)
 ;; (setq-default viper-auto-indent t							)
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
+

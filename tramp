@@ -1,4 +1,4 @@
-;; -*- emacs-lisp -*- <12/09/26 14:58:54 /Users/phil/.emacs.d/tramp>
+;; -*- emacs-lisp -*- <13/06/17 16:33:09 /Users/phil/.emacs.d/tramp>
 ;; Tramp connection history.  Don't change this file.
 ;; You can delete it, forcing Tramp to reapply the checks.
 
@@ -22,28 +22,6 @@
 	("remote-encoding" "base64")
 	("remote-decoding" "base64 -d")
 	("uid-integer" 4580))
- (["sudo" "root" "localhost" nil]
-	("uname" "Darwin 10.8.0")
-	("test" "test")
-	("remote-path"
-	 ("/usr/bin" "/bin" "/usr/sbin" "/sbin" "/usr/local/bin"))
-	("remote-shell" "/bin/sh")
-	("~root" "/var/root")
-	("file-exists" "test -e")
-	("stat" nil)
-	("perl-file-spec" t)
-	("perl-cwd-realpath" t)
-	("perl" "\\perl")
-	("id" "/usr/bin/id")
-	("gid-integer" 0)
-	("uid-integer" 0)
-	("readlink" nil)
-	("local-encoding" base64-encode-region)
-	("local-decoding" base64-decode-region)
-	("remote-encoding" tramp-perl-encode-with-module)
-	("remote-decoding" tramp-perl-decode-with-module)
-	("busybox" nil)
-	("tmpdir" "/sudo:root@localhost:/tmp"))
  (["scp" "proudot" "titanic" nil]
 	("uname" "Linux 2.6.8-1.541smp")
 	("test" "test")
@@ -84,7 +62,302 @@
 	("remote-encoding" "recode data..base64")
 	("remote-decoding" "recode base64..data")
 	("tmp-directory" "/tmp"))
- (["su" "root" "localhost" nil]
+ (["ssh" "pr120" "danuser-wkstn24.med.harvard.edu" nil]
+	("uname" "Linux 3.2.0-37-generic")
+	("test" "test")
+	("remote-path"
+	 ("/bin" "/usr/bin" "/usr/sbin" "/usr/local/bin"))
+	("remote-shell" "/bin/sh")
+	("busybox" nil)
+	("~" "/home/pr120")
+	("ls" "/bin/ls --color=never")
+	("ls-dired" t)
+	("stat" "\\stat")
+	("file-exists" "test -e")
+	("id" "/usr/bin/id")
+	("gid-integer" 2106731))
+ ([#("smb" 0 3
+		 (org-attr nil))
+	 #("proudot" 0 7
+		 (org-attr nil))
+	 #("nas1b.irisa.fr" 0 14
+		 (org-attr nil))
+	 nil]
+	("smbclient-version" "Version 3.0.28a-apple"))
+ (["smb" nil
+	 #("nas1b.irisa.fr" 0 14
+		 (org-attr nil))
+	 nil]
+	("smbclient-version" "Version 3.0.28a-apple"))
+ (["sudo" "root" "localhost" nil]
+	("test" "test")
+	("file-exists" "test -e")
+	("tmpdir" "/sudo:root@localhost:/tmp")
+	("remote-path"
+	 ("/usr/bin" "/bin" "/usr/sbin" "/sbin" "/usr/local/bin"))
+	("id" "/usr/bin/id")
+	("uid-integer" 0)
+	("stat" nil)
+	("uname" "Darwin 10.8.0")
+	("remote-shell" "/bin/sh")
+	("busybox" nil)
+	("perl-file-spec" t)
+	("perl-cwd-realpath" t)
+	("perl" "\\perl")
+	("gid-integer" 0)
+	("readlink" nil))
+ ([#("ssh" 0 1
+		 (keymap
+			(keymap
+			 (follow-link . mouse-face)
+			 (mouse-3 . org-find-file-at-mouse)
+			 (mouse-2 . org-open-at-mouse))
+			face org-link mouse-face highlight org-no-flyspell t rear-nonsticky
+			(mouse-face highlight keymap invisible intangible help-echo org-linked-text)
+			font-lock-fontified t fontified t)
+		 1 2
+		 (keymap
+			(keymap
+			 (follow-link . mouse-face)
+			 (mouse-3 . org-find-file-at-mouse)
+			 (mouse-2 . org-open-at-mouse))
+			face org-link mouse-face highlight org-no-flyspell t rear-nonsticky
+			(mouse-face highlight keymap invisible intangible help-echo org-linked-text)
+			fontified t font-lock-fontified t)
+		 2 3
+		 (keymap
+			(keymap
+			 (follow-link . mouse-face)
+			 (mouse-3 . org-find-file-at-mouse)
+			 (mouse-2 . org-open-at-mouse))
+			face org-link mouse-face highlight org-no-flyspell t rear-nonsticky
+			(mouse-face highlight keymap invisible intangible help-echo org-linked-text)
+			fontified t font-lock-fontified t))
+	 #("pr120" 0 5
+		 (keymap
+			(keymap
+			 (follow-link . mouse-face)
+			 (mouse-3 . org-find-file-at-mouse)
+			 (mouse-2 . org-open-at-mouse))
+			face org-link mouse-face highlight org-no-flyspell t fontified t))
+	 #("orchestra.med.harvard.edu" 0 8
+		 (keymap
+			(keymap
+			 (follow-link . mouse-face)
+			 (mouse-3 . org-find-file-at-mouse)
+			 (mouse-2 . org-open-at-mouse))
+			face org-link mouse-face highlight org-no-flyspell t fontified t)
+		 8 9
+		 (keymap
+			(keymap
+			 (follow-link . mouse-face)
+			 (mouse-3 . org-find-file-at-mouse)
+			 (mouse-2 . org-open-at-mouse))
+			face org-link mouse-face highlight org-no-flyspell t rear-nonsticky
+			(mouse-face highlight keymap invisible intangible help-echo org-linked-text)
+			fontified t)
+		 9 10
+		 (keymap
+			(keymap
+			 (follow-link . mouse-face)
+			 (mouse-3 . org-find-file-at-mouse)
+			 (mouse-2 . org-open-at-mouse))
+			face org-link mouse-face highlight org-no-flyspell t fontified t)
+		 10 11
+		 (keymap
+			(keymap
+			 (follow-link . mouse-face)
+			 (mouse-3 . org-find-file-at-mouse)
+			 (mouse-2 . org-open-at-mouse))
+			face org-link mouse-face highlight org-no-flyspell t rear-nonsticky
+			(mouse-face highlight keymap invisible intangible help-echo org-linked-text)
+			fontified t)
+		 11 12
+		 (keymap
+			(keymap
+			 (follow-link . mouse-face)
+			 (mouse-3 . org-find-file-at-mouse)
+			 (mouse-2 . org-open-at-mouse))
+			face org-link mouse-face highlight org-no-flyspell t rear-nonsticky
+			(mouse-face highlight keymap invisible intangible help-echo org-linked-text)
+			fontified t)
+		 12 13
+		 (keymap
+			(keymap
+			 (follow-link . mouse-face)
+			 (mouse-3 . org-find-file-at-mouse)
+			 (mouse-2 . org-open-at-mouse))
+			face org-link mouse-face highlight org-no-flyspell t rear-nonsticky
+			(mouse-face highlight keymap invisible intangible help-echo org-linked-text)
+			fontified t)
+		 13 14
+		 (keymap
+			(keymap
+			 (follow-link . mouse-face)
+			 (mouse-3 . org-find-file-at-mouse)
+			 (mouse-2 . org-open-at-mouse))
+			face org-link mouse-face highlight org-no-flyspell t fontified t)
+		 14 15
+		 (keymap
+			(keymap
+			 (follow-link . mouse-face)
+			 (mouse-3 . org-find-file-at-mouse)
+			 (mouse-2 . org-open-at-mouse))
+			face org-link mouse-face highlight org-no-flyspell t rear-nonsticky
+			(mouse-face highlight keymap invisible intangible help-echo org-linked-text)
+			fontified t)
+		 15 16
+		 (keymap
+			(keymap
+			 (follow-link . mouse-face)
+			 (mouse-3 . org-find-file-at-mouse)
+			 (mouse-2 . org-open-at-mouse))
+			face org-link mouse-face highlight org-no-flyspell t rear-nonsticky
+			(mouse-face highlight keymap invisible intangible help-echo org-linked-text)
+			fontified t)
+		 16 17
+		 (keymap
+			(keymap
+			 (follow-link . mouse-face)
+			 (mouse-3 . org-find-file-at-mouse)
+			 (mouse-2 . org-open-at-mouse))
+			face org-link mouse-face highlight org-no-flyspell t rear-nonsticky
+			(mouse-face highlight keymap invisible intangible help-echo org-linked-text)
+			fontified t)
+		 17 18
+		 (keymap
+			(keymap
+			 (follow-link . mouse-face)
+			 (mouse-3 . org-find-file-at-mouse)
+			 (mouse-2 . org-open-at-mouse))
+			face org-link mouse-face highlight org-no-flyspell t rear-nonsticky
+			(mouse-face highlight keymap invisible intangible help-echo org-linked-text)
+			fontified t)
+		 18 19
+		 (keymap
+			(keymap
+			 (follow-link . mouse-face)
+			 (mouse-3 . org-find-file-at-mouse)
+			 (mouse-2 . org-open-at-mouse))
+			face org-link mouse-face highlight org-no-flyspell t rear-nonsticky
+			(mouse-face highlight keymap invisible intangible help-echo org-linked-text)
+			fontified t)
+		 19 20
+		 (keymap
+			(keymap
+			 (follow-link . mouse-face)
+			 (mouse-3 . org-find-file-at-mouse)
+			 (mouse-2 . org-open-at-mouse))
+			face org-link mouse-face highlight org-no-flyspell t rear-nonsticky
+			(mouse-face highlight keymap invisible intangible help-echo org-linked-text)
+			fontified t)
+		 20 21
+		 (keymap
+			(keymap
+			 (follow-link . mouse-face)
+			 (mouse-3 . org-find-file-at-mouse)
+			 (mouse-2 . org-open-at-mouse))
+			face org-link mouse-face highlight org-no-flyspell t rear-nonsticky
+			(mouse-face highlight keymap invisible intangible help-echo org-linked-text)
+			fontified t)
+		 21 22
+		 (keymap
+			(keymap
+			 (follow-link . mouse-face)
+			 (mouse-3 . org-find-file-at-mouse)
+			 (mouse-2 . org-open-at-mouse))
+			face org-link mouse-face highlight org-no-flyspell t fontified t)
+		 22 23
+		 (keymap
+			(keymap
+			 (follow-link . mouse-face)
+			 (mouse-3 . org-find-file-at-mouse)
+			 (mouse-2 . org-open-at-mouse))
+			face org-link mouse-face highlight org-no-flyspell t rear-nonsticky
+			(mouse-face highlight keymap invisible intangible help-echo org-linked-text)
+			fontified t)
+		 23 24
+		 (keymap
+			(keymap
+			 (follow-link . mouse-face)
+			 (mouse-3 . org-find-file-at-mouse)
+			 (mouse-2 . org-open-at-mouse))
+			face org-link mouse-face highlight org-no-flyspell t rear-nonsticky
+			(mouse-face highlight keymap invisible intangible help-echo org-linked-text)
+			fontified t)
+		 24 25
+		 (keymap
+			(keymap
+			 (follow-link . mouse-face)
+			 (mouse-3 . org-find-file-at-mouse)
+			 (mouse-2 . org-open-at-mouse))
+			face org-link mouse-face highlight org-no-flyspell t rear-nonsticky
+			(mouse-face highlight keymap invisible intangible help-echo org-linked-text)
+			fontified t))
+	 nil]
+	("uname" "Linux 3.2.0-0.bpo.4-amd64")
+	("test" "test")
+	("remote-path"
+	 ("/bin" "/usr/bin" "/usr/sbin" "/usr/local/bin"))
+	("remote-shell" "/bin/sh")
+	("busybox" nil)
+	("ls" "/bin/ls --color=never")
+	("ls-dired" t)
+	("stat" "\\stat")
+	("file-exists" "test -e")
+	("id" "/usr/bin/id")
+	("gid-integer" 2106731)
+	("~" "/home/pr120")
+	("readlink" "\\readlink")
+	("local-encoding" base64-encode-region)
+	("local-decoding" base64-decode-region)
+	("remote-encoding" "base64")
+	("remote-decoding" "base64 -d -i")
+	("inline-compress" "gzip")
+	("inline-decompress" "gzip -d")
+	("perl-file-spec" t)
+	("perl-cwd-realpath" t)
+	("perl" "\\perl"))
+ (["scpc" nil "smb" nil]
 	nil)
- (["ssh1" "proudot" "sequoia" nil]
-	nil))
+ (["ssh" "proudot" "sabre" nil]
+	("uname" "Linux 3.1.9-1.fc16.x86_64")
+	("test" "test")
+	("remote-path"
+	 ("/bin" "/usr/bin" "/usr/sbin" "/usr/local/bin"))
+	("remote-shell" "/bin/sh")
+	("busybox" nil)
+	("file-exists" "test -e")
+	("tmpdir" "/ssh:proudot@sabre:/tmp")
+	("perl-file-spec" t)
+	("perl-cwd-realpath" t)
+	("perl" "\\perl"))
+ (["scpc" nil "ssh" nil]
+	nil)
+ (["ssh" "proudot" "igrida-oar-frontend" nil]
+	("uname" "Linux 2.6.32-5-amd64")
+	("test" "test")
+	("remote-path"
+	 ("/bin" "/usr/bin" "/usr/sbin" "/usr/local/bin"))
+	("remote-shell" "/bin/sh")
+	("busybox" nil)
+	("~" "/udd/proudot")
+	("ls" "/bin/ls --color=never")
+	("ls-dired" t)
+	("stat" "\\stat")
+	("file-exists" "test -e")
+	("id" "/usr/bin/id")
+	("gid-integer" 29110)
+	("tmpdir" "/ssh:proudot@igrida-oar-frontend:/tmp")
+	("readlink" "\\readlink")
+	("local-encoding" base64-encode-region)
+	("local-decoding" base64-decode-region)
+	("remote-encoding" "base64")
+	("remote-decoding" "base64 -d -i")
+	("perl-file-spec" t)
+	("perl-cwd-realpath" t)
+	("perl" "\\perl")
+	("inline-compress" "gzip")
+	("inline-decompress" "gzip -d")
+	("uid-integer" 4580)
+	("gid-string" "serpico")))
