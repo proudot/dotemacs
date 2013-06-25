@@ -332,6 +332,18 @@
 (global-set-key (kbd "C-x g") 'prelude-google)
 
 
+;; smtp mail setting
+
+(require 'smtpmail)
+
+(setq send-mail-function 'smtpmail-send-it
+      message-send-mail-function 'smtpmail-send-it
+      smtpmail-default-smtp-server "smtp.inria.fr"
+      smtpmail-smtp-server "smtp.inria.fr"
+      smtpmail-smtp-service 587
+      smtpmail-debug-info t
+			smtpmail-stream-type 'starttls
+			)
 
 
 ;; CMake
