@@ -332,10 +332,6 @@
 (global-set-key (kbd "C-x g") 'prelude-google)
 
 
-;; email in emacs
-(add-to-list 'load-path "~/.emacs.d/mu4e")
-(require 'mu4e)
-
 
 
 ;; sending mail -- replace USERNAME with your gmail username
