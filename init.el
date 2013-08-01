@@ -11,9 +11,9 @@
 ;;;;;;;;;;;;;;;;;;;;;;;
 
 ;; Linux
+
 ;; (setq x-select-enable-clipboard t)
 ;; (setq interprogram-paste-function 'x-cut-buffer-or-selection-value)
-
 ;; Frame size
 ;; (setq default-frame-alist
 ;;       '((top . 0) (left . 500)
@@ -344,10 +344,6 @@
       (read-string "Google: ")))))
 (global-set-key (kbd "C-x g") 'prelude-google)
 
-
-;; email in emacs
-(add-to-list 'load-path "~/.emacs.d/mu4e")
-(require 'mu4e)
 
 
 

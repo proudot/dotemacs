@@ -1,0 +1,128 @@
+cd ../aspell6-en-7.1-0/
+./configure 
+*sudo make install
+ssh phil@centrosome.inria.fr
+ssh phil@centrosome.inria.fr
+ssh proudot@sabre.inria.fr
+cd build/
+./simu_tcspc 
+make
+./simu_tcspc 
+./simu_tcspc 
+make ; ./simu_tcspc 
+make ; ./simu_tcspc 
+cd
+cd Downloads/
+unzip --usage
+unzip vbSPT_0.9_20130116.zip
+ls vbSPT/
+open vbSPT/vbSPT_userguide.pdf
+ssh centrosome
+ssh phil@centrosome
+rm CIMG4917.JPG CIMG4830.JPG 
+open TorBrowser_en-US.app/
+rm -rf ~/Library/Application\ Support/Skype/antoine69001
+clear
+rm -rf ~/Library/Application\ Support/Skype/antoine69001
+cd
+cd code/flimtrack/build/
+cmake ..
+make journal_micro
+port search gnutls
+cd ../code
+ls
+mkdir xp_repo_serpico
+cd xp_repo_serpico/
+git clone ssh://git@sequoia/var/cache/git/repolib.git/git clone ssh://git@sequoia/var/cache/git/repoallinone.git/
+git clone ssh://git@sequoia/var/cache/git/repolib.git/
+ls
+git clone ssh://git@sequoia/var/cache/git/repolib.git/
+ls
+cd repolib/
+ls
+cd ../repoallinone/
+ls
+ls image-tools/
+ls image-tools/cooltiffsplit/
+cd ..
+ls
+cd repolib/
+ls
+ls libs
+cd libs/
+cd debruitage/
+ls
+cd ndsafir/
+ls
+ls
+cd ndsafir3.0/
+ls
+cd ndsafir/
+ls
+find-file data.cpp
+rm -rf ~/Library/Application\ Support/Skype/antoine69001
+rm ~/Downloads/Photo\ on\ 12-30-12\ at\ 10.39\ PM.jpg 
+rm -rf ~/Library/Application\ Support/Skype/antoine69001
+c
+cd
+ssh proudot@centrosome
+ssh phil@centrosome
+cd
+rsync -avz phil@centrosome:/Volumes/proudot-1/projets/FD-FLIM /Volumes/temp_serpico_1/proudot/projets/
+*sudo port installfftw
+*sudo port installfftw
+*sudo port install fftw
+port
+*sudo port install fftw
+*sudo port install openexr
+*sudo port install graphicsmagick
+*sudo port install gmic
+;s
+cd Public/
+cd ../Pictures/
+ls
+cd New-York/
+ls
+cd new-york/
+ls
+cd 102_PANA/
+ls
+gmic * 
+gmic * -resize 0.1 
+gmic * -resize 
+gmic -h -resize 
+gmic -h -resize 512,512 
+gmic * -resize 512,512 
+man gmic
+gmic * -resize 10%,10%
+gmic * -resize 10%,10% -a[0-2] x -a[1-3] x -a y
+gmic * -resize 10%,10% -a[0-2] x -a[1-3] x -a y
+gmic * -resize 10%,10% -a[0-2] x -a[1-3] x -a y
+gmic *  -a[0-2] x -a[1-3] x -a y
+gmic *  -resize 1%,1%
+gmic *  -resize 5%,5%
+gmic *  -resize 15%,15%
+gmic P1020004  -resize 15%,15%
+gmic P1020004.JPG   -resize 15%,15%
+gmic P1020003.JPG   -resize 15%,15%
+gmic P1020002.JPG   -resize 15%,15%
+gmic P1020005.JPG   -resize 15%,15%
+gmic P1020006.JPG   -resize 15%,15%
+gmic P1020006.JPG  
+gmic P1020006.JPG  -sobe;
+gmic P1020006.JPG  -sobel
+gmic P1020006.JPG  -edge
+gmic P1020006.JPG  -edgetensor
+gmic P1020006.JPG  -edgetensors
+gmic P1020006.JPG  -edgetensors 0.8
+gmic P1020006.JPG  -eikonal 1,1
+gmic P1020006.JPG  -water
+gmic P1020006.JPG  -water
+gmic P1020006.JPG  -wind
+gmic P1020006.JPG  -pixelize
+gmic P1020006.JPG  -pixelize 100,100,100
+gmic P1020006.JPG  -cracks 
+gmic P1020006.JPG  -texturize_paper
+gmic P1020006.JPG  -x_fisheye
+rm -rf ~/Library/Application\ Support/Skype/antoine69001
+ls
