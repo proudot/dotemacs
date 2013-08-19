@@ -1,0 +1,238 @@
+;; -*- mode: emacs-lisp; coding: emacs-mule; -*-
+;; --------------------------------------------------------------------------
+;; Desktop File for Emacs
+;; --------------------------------------------------------------------------
+;; Created Wed Mar 20 15:04:27 2013
+;; Desktop file format version 206
+;; Emacs version 24.1.1
+
+;; Global section:
+(setq desktop-missing-file-warning nil)
+(setq tags-file-name nil)
+(setq tags-table-list nil)
+(setq search-ring '("auto-comp" "figure" "h" "tif" "eshe" "createmovie)" "	" "code" "overla" "phil" "forSe" "and al" "tcspc" "find" "cimg_libraries" "lib"))
+(setq regexp-search-ring '("h.=.figure" "h.*=.*figure" "h.*figure" "compute_block_pixel" "	" "\\_<get_phase_irls\\_>" "estimator" "\\_<DEFAULT_KERNEL_SIGMA\\_>" "\\_<build_kernel\\_>" "\\_<build_neighboor_free\\_>" "\\_<nb_f_max\\_>" "\\_<fit_spot\\_>" "\\_<store_f_values\\_>" "\\_<sequence_phases\\_>" "\\_<sub_orig_stack\\_>" "\\_<sequence_lifetimes_crop\\_>"))
+(setq register-alist nil)
+(setq file-name-history '("/Users/phil/Documents/these/data/Lat/script/KF_iter.m" "/Users/phil/code/heterogenous_track/common/graphics/overlayTracksMovieNew.m" "/Users/phil/code/heterogenous_track/common/graphics/overlayKFSchemeLink.m" "/Users/phil/code/heterogenous_track/matlab_code/common/graphics/overlayTracksMovieNew.m" "/Users/phil/code/heterogenous_track/matlab_code/common/graphics/overlaySegment2DImage.m" "/Users/phil/Documents/these/data/Lat/script/KF_iter.m" "/Users/phil/Documents/these/data/Lat/script/controlVanilliaUTrack.m" "/Users/phil/Documents/these/data/Lat/script/track_sequences.m" "/ssh:pr120@danuser-wkstn24.med.harvard.edu:" "/Users/phil/Documents/these/data/GelfandLabData_03152012/large_motion_script/birth_and_death_threshold.txt" "/Users/phil/Documents/these/data/GelfandLabData_03152012/large_motion_script/KF_iter.m" "/Users/phil/code/heterogenous_track/common/detectionAlgorithms/." "/Users/phil/code/heterogenous_track/common/detectionAlgorithms/pointSourceDetection.m" "/Users/phil/code/heterogenous_track/common/graphics/." "/Users/phil/code/heterogenous_track/common/iofun/paths/." "/Users/phil/code/heterogenous_track/common/iofun/paths/getSubsequenceOfFiles.m" "/ssh:pr120@orchestra.med.harvard.edu:" "/Users/phil/Dropbox/org_files/rapport_fr_stage_harvard/strings.bib" "/Users/phil/code/serpicodev/tcspc/CMakeModules/FindGSL.cmake" "/Users/phil/code/serpicodev/flimtrack/src/simu_TCSPC.cpp" "/Users/phil/code/serpicodev/flimtrack/CMakeLists.txt" "/Users/phil/code/serpicodev/tcspc/." "/Users/phil/code/serpicodev/tcspc/src/." "/Users/phil/code/serpicodev/flimtrack/CMakeLists.txt" "/Users/phil/code/serpicodev/flimtrack/src/simu_TCSPC.cpp" "/Users/phil/code/serpicodev/flimtrack/src/FD_FLIM_simu.cpp" "/Users/phil/code/serpicodev/flimtrack/src/simuFLIM.cpp" "/Users/phil/code/serpicodev/flimtrack/src/fluo_simu.cpp" "/Users/phil/Dropbox/org_files/rapport_fr_stage_harvard/rapport-matisse.pdf" "/Users/phil/Dropbox/org_files/rapport_fr_stage_harvard/rapport-gdr.pdf"))
+
+;; Buffer section -- buffers listed in same order as in buffer list:
+(desktop-create-buffer 206
+  "/Users/phil/.emacs.d/init.el"
+  "init.el"
+  'emacs-lisp-mode
+  '(yas/minor-mode smart-tab-mode TeX-PDF-mode)
+  7177
+  '(7024 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . utf-8-unix)))
+
+(desktop-create-buffer 206
+  "/Users/phil/code/serpicodev/tcspc/src/simu_TCSPC.cpp"
+  "simu_TCSPC.cpp"
+  'c++-mode
+  '(abbrev-mode yas/minor-mode smart-tab-mode TeX-PDF-mode gtags-mode auto-complete-mode)
+  980
+  '(nil nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/Users/phil/Documents/these/data/Lat/script/KF_iter.m"
+  "KF_iter.m"
+  'matlab-mode
+  '(auto-fill-mode smart-tab-mode TeX-PDF-mode)
+  6402
+  '(7444 nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . undecided-dos) (fill-column . 150) (truncate-lines . t)))
+
+(desktop-create-buffer 206
+  "/Users/phil/Documents/these/data/Lat/script/controlVanilliaUTrack.m"
+  "controlVanilliaUTrack.m"
+  'matlab-mode
+  '(auto-fill-mode smart-tab-mode TeX-PDF-mode)
+  1311
+  '(1137 nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . undecided-dos) (fill-column . 150) (truncate-lines . t)))
+
+(desktop-create-buffer 206
+  "/Users/phil/code/heterogenous_track/common/graphics/overlayKFSchemeLink.m"
+  "overlayKFSchemeLink.m"
+  'matlab-mode
+  '(auto-fill-mode smart-tab-mode TeX-PDF-mode)
+  22576
+  '(13471 nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix) (fill-column . 150)))
+
+(desktop-create-buffer 206
+  "/Users/phil/code/heterogenous_track/common/graphics/overlayTracksMovieNew.m"
+  "overlayTracksMovieNew.m"
+  'matlab-mode
+  '(auto-fill-mode smart-tab-mode TeX-PDF-mode)
+  32260
+  '(32260 nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix) (fill-column . 150)))
+
+(desktop-create-buffer 206
+  "/Users/phil/Documents/these/data/Lat/script/track_sequences.m"
+  "track_sequences.m"
+  'matlab-mode
+  '(auto-fill-mode smart-tab-mode TeX-PDF-mode)
+  821
+  '(820 nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix) (fill-column . 150)))
+
+(desktop-create-buffer 206
+  "/Users/phil/code/heterogenous_track/matlab_code/common/graphics/overlaySegment2DImage.m"
+  "overlaySegment2DImage.m"
+  'matlab-mode
+  '(auto-fill-mode smart-tab-mode TeX-PDF-mode)
+  237
+  '(nil nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix) (fill-column . 150)))
+
+(desktop-create-buffer 206
+  "/Users/phil/code/heterogenous_track/common/detectionAlgorithms/pointSourceDetection.m"
+  "pointSourceDetection.m"
+  'matlab-mode
+  '(auto-fill-mode smart-tab-mode TeX-PDF-mode)
+  1068
+  '(1067 nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . utf-8-unix) (fill-column . 150) (truncate-lines . t)))
+
+(desktop-create-buffer 206
+  "/Users/phil/org_files/these.org"
+  "these.org"
+  'org-mode
+  '(auto-fill-mode TeX-PDF-mode)
+  150777
+  '(150777 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . utf-8-unix) (truncate-lines . t)))
+
+(desktop-create-buffer 206
+  "/Users/phil/Documents/these/data/GelfandLabData_03152012/large_motion_script/KF_iter.m"
+  "KF_iter.m"
+  'matlab-mode
+  '(auto-fill-mode smart-tab-mode TeX-PDF-mode)
+  140
+  '(140 nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . undecided-dos) (fill-column . 150) (truncate-lines . t)))
+
+(desktop-create-buffer 206
+  "/Users/phil/Documents/these/data/GelfandLabData_03152012/large_motion_script/birth_and_death_threshold.txt"
+  "birth_and_death_threshold.txt"
+  'text-mode
+  '(auto-fill-mode yas/minor-mode smart-tab-mode TeX-PDF-mode)
+  21
+  '(21 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/Users/phil/code/heterogenous_track/common/detectionAlgorithms/pointSourceDetection.m"
+  "pointSourceDetection.m"
+  'matlab-mode
+  '(auto-fill-mode smart-tab-mode TeX-PDF-mode)
+  2681
+  '(2681 nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix) (fill-column . 150)))
+
+(desktop-create-buffer 206
+  "/Users/phil/code/heterogenous_track/common/iofun/paths/getSubsequenceOfFiles.m"
+  "getSubsequenceOfFiles.m"
+  'matlab-mode
+  '(auto-fill-mode smart-tab-mode TeX-PDF-mode)
+  1431
+  '(1431 nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix) (fill-column . 150)))
+
+(desktop-create-buffer 206
+  "/Users/phil/code/heterogenous_track/common/graphics/overlayFeaturesMovie.m"
+  "overlayFeaturesMovie.m"
+  'matlab-mode
+  '(auto-fill-mode smart-tab-mode TeX-PDF-mode)
+  773
+  '(773 nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . utf-8-unix) (fill-column . 150)))
+
+(desktop-create-buffer 206
+  "/Users/phil/code/heterogenous_track/common/iofun/paths/getImgPaths.m"
+  "getImgPaths.m"
+  'matlab-mode
+  '(auto-fill-mode smart-tab-mode TeX-PDF-mode)
+  767
+  '(767 nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . utf-8-unix) (fill-column . 150)))
+
+(desktop-create-buffer 206
+  "/Users/phil/Dropbox/org_files/rapport_fr_stage_harvard/rapport-matisse.tex"
+  "rapport-matisse.tex"
+  'latex-mode
+  '(visual-line-mode yas/minor-mode smart-tab-mode TeX-PDF-mode reftex-mode)
+  416
+  '(416 nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . utf-8-unix) (truncate-lines)))
+
+(desktop-create-buffer 206
+  "/Users/phil/Dropbox/org_files/rapport_fr_stage_harvard/strings.bib"
+  "strings.bib"
+  'bibtex-mode
+  '(smart-tab-mode TeX-PDF-mode)
+  5127
+  '(4867 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . utf-8-unix) (TeX-master . t)))
+
+(desktop-create-buffer 206
+  "/Users/phil/Dropbox/org_files/rapport_fr_stage_harvard/_region_.tex"
+  "_region_.tex"
+  'latex-mode
+  '(auto-fill-mode yas/minor-mode smart-tab-mode TeX-PDF-mode reftex-mode)
+  5194
+  '(nil nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . utf-8-unix)))
+
+(desktop-create-buffer 206
+  nil
+  " org-src-fontification:latex-mode"
+  'latex-mode
+  '(auto-fill-mode yas/minor-mode smart-tab-mode TeX-PDF-mode reftex-mode)
+  1721
+  '(nil nil)
+  nil
+  nil
+  '((indent-tabs-mode)))
+

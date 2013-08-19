@@ -48,7 +48,7 @@
 (when (equal system-type 'darwin) (set-exec-path-from-shell-PATH))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; Fundamental mode related (every mode) ;;
+;; Fundamental mode (every mode)         ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (require 'uniquify)
@@ -123,6 +123,12 @@
 	(delete-window)
   )
 
+
+(fset 'kill-current-buffer
+   [?\C-x ?k return])
+
+(global-set-key (kbd "M-4") 'kill-current-buffer)
+
 (defun dedicate ()
 	(interactive)
 	(set-window-dedicated-p (selected-window) t))
@@ -181,6 +187,10 @@
 (define-key ido-common-completion-map (kbd "C-TAB") 'ido-prev-match)
 (setq ido-default-buffer-method 'selected-window)
 
+;; Tramp
+(setq password-cache-expiry nil)
+
+
 ;; iFlipBuffer
 (require 'iflipb)
 
@@ -210,30 +220,33 @@
 (yas/load-directory "~/.emacs.d/plugins/yasnippet-0.6.1c/snippets/")
 (global-set-key (kbd "C-c C-y") 'yas/expand)
 
-
+;; Move text
+(require 'move-text)
+(global-set-key [M-up] 'move-text-up)
+(global-set-key [M-down] 'move-text-down)
 
 
 ;; Complete with tab !!
-;; (require 'smart-tab)
-;; (global-smart-tab-mode 1)
-;; (setq smart-tab-using-hippie-expand t)
-;; (setq smart-tab-disabled-major-modes '(org-mode term-mode eshell-mode debugger-mode matlab-shell-mode shell-mode))
+(require 'smart-tab)
+(global-smart-tab-mode 1)
+(setq smart-tab-using-hippie-expand t)
+(setq smart-tab-disabled-major-modes '(org-mode term-mode eshell-mode debugger-mode matlab-shell-mode shell-mode))
 
-;; An other minor mode for auto-completion...
-(require 'auto-complete-config)
+;; Auto-complete-mode is an other minor mode for auto-completion...
+;; A bit to slow for emacs sadly ...
+;; (require 'auto-complete-config)
 ;;(add-to-list 'ac-dictionary-directories "~/.emacs.d//ac-dict")
 ;;(ac-config-default)
-(setq-default ac-sources '( ac-source-words-in-buffer ac-source-filename))
+;;(setq-default ac-sources '( ac-source-words-in-buffer ac-source-filename ac-source-words-in-same-mode-buffers))
 ;; (setq-default ac-sources '(ac-source-abbrev ac-source-words-in-same-mode-buffers ac-source-words-in-buffer  ac-source-symbols ))
 ;; (ac-set-trigger-key nil)
 ;; (setq ac-auto-start t)
 
-(global-auto-complete-mode t)
-(defun auto-complete-mode-maybe ()
-  "No maybe for you. Only AC!"
-  (unless (minibufferp (current-buffer))
-    (auto-complete-mode 1)))
-
+;; (global-auto-complete-mode nil)
+;; (defun auto-complete-mode-maybe ()
+;;   "No maybe for you. Only AC!"
+;;   (unless (minibufferp (current-buffer))
+;;     (auto-complete-mode 1)))
 
 
 ;; Pager
@@ -370,7 +383,7 @@
  '(comint-input-ignoredups t)
  '(comint-prompt-read-only t)
  '(default-justification (quote full))
- '(doc-view-continuous nil)
+ '(doc-view-continuous t)
  '(eshell-scroll-to-bottom-on-output (quote all))
  '(framepop-enable-keybinding "<f2>")
  '(fringe-mode 5 nil (fringe))
@@ -382,7 +395,7 @@
  '(jabber-alert-presence-hooks nil)
  '(jabber-chat-buffer-show-avatar nil)
  '(jabber-roster-line-format "%c %-25n %u %-8s  %S")
- '(matlab-mode-install-path (quote ("~/code/heterogenous_track/common/" "~/code/heterogenous_track/data_analysis/" "/usr/local/MATLAB/R2012a/")))
+ '(matlab-mode-install-path (quote ("/Volumes/data1/proudot/projets/heterogeneous_track/code_repo/" "/usr/local/MATLAB/R2012a/")))
  '(midnight-mode t nil (midnight))
  '(org-agenda-files (quote ("~/Dropbox/org_files/biblio.org" "~/Dropbox/org_files/these.org" "~/Dropbox/org_files/notes.org")))
  '(org-blank-before-new-entry (quote ((heading . t) (plain-list-item . auto))))
@@ -465,9 +478,7 @@ directory and insert a link to this file."
 
 ;; IflipBuffer
 (global-set-key (kbd "<C-tab>") 'iflipb-next-buffer)
-(global-set-key
- (if (featurep 'xemacs) (kbd "<C-iso-left-tab>") (kbd "<C-S-iso-lefttab>"))
- 'iflipb-previous-buffer)
+(global-set-key (kbd "<C-S-tab>") 'iflipb-previous-buffer)
 
 ;; Gtalk in emacs
 ;; (sometime usefull but chat is not always updated)
