@@ -4,6 +4,7 @@
 (add-to-list 'load-path "~/.emacs.d/completion-ui/")
 (add-to-list 'load-path "~/.emacs.d/emacs-jabber-0.8.0/")
 (add-to-list 'load-path "~/.emacs.d/elpa/frame-bufs/")
+(add-to-list 'load-path "~/.emacs.d/elpa/org-plus-contrib-20130805/")
 (add-to-list 'load-path "~/.emacs.d/plugins/matlab-emacs")
 
 ;;;;;;;;;;;;;;;;;;;;;;;
@@ -170,9 +171,12 @@
 ;; ;;; packages in your .emacs.
 (require 'package)
 (add-to-list 'package-archives
-    '("marmalade" .
-      "http://marmalade-repo.org/packages/"))
+						 '("org" . "http://orgmode.org/elpa/")
+						 '("marmalade" . "http://marmalade-repo.org/packages/")
+)
 (package-initialize)
+
+
 
 ;;;;;;;;;;;;;;;;;;
 ;;  my modes    ;;
@@ -409,6 +413,7 @@
  '(org-agenda-files (quote ("~/Dropbox/org_files/biblio.org" "~/Dropbox/org_files/these.org" "~/Dropbox/org_files/notes.org")))
  '(org-blank-before-new-entry (quote ((heading . t) (plain-list-item . auto))))
  '(org-export-latex-classes (quote (("article" "\\documentclass[11pt]{article}" ("\\section{%s}" . "\\section*{%s}") ("\\subsection{%s}" . "\\subsection*{%s}") ("\\subsubsection{%s}" . "\\subsubsection*{%s}") ("\\paragraph{%s}" . "\\paragraph*{%s}") ("\\subparagraph{%s}" . "\\subparagraph*{%s}")) ("report" "\\documentclass[11pt]{report}" ("\\part{%s}" . "\\part*{%s}") ("\\chapter{%s}" . "\\chapter*{%s}") ("\\section{%s}" . "\\section*{%s}") ("\\subsection{%s}" . "\\subsection*{%s}") ("\\subsubsection{%s}" . "\\subsubsection*{%s}")) ("book" "\\documentclass[11pt]{book}" ("\\part{%s}" . "\\part*{%s}") ("\\chapter{%s}" . "\\chapter*{%s}") ("\\section{%s}" . "\\section*{%s}") ("\\subsection{%s}" . "\\subsection*{%s}") ("\\subsubsection{%s}" . "\\subsubsection*{%s}")) ("beamer" "\\documentclass{beamer}" org-beamer-sectioning) ("letter" "\\documentclass[12pt]{lettre}"))))
+ '(org-modules (quote (org-bbdb org-bibtex org-docview org-gnus org-info org-jsinfo org-irc org-mew org-mhe org-rmail org-vm org-wl org-w3m org-mac-link-grabber)))
  '(send-mail-function (quote mailclient-send-it))
  '(show-paren-mode t)
  '(tags-revert-without-query t)
@@ -417,11 +422,12 @@
 ;; Org Mode
 
 ;; (define-key viper-vi-global-user-map (kbd "C-c /") 'org-sparse-tree)
-;; (setq org-blank-before-new-entry t) ERROR
+(setq org-blank-before-new-entry t) ;; ERROR ?
 (add-hook 'org-mode-hook
 					(lambda ()
 						(local-set-key (kbd "C-c C-h") 'my-screenshot)
 						(define-key org-mode-map [(control tab)] nil)
+						(define-key org-mode-map (kbd "C-c g") 'omlg-grab-link)						
 						)
 					)
 

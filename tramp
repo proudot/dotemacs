@@ -1,28 +1,8 @@
-;; -*- emacs-lisp -*- <13/06/17 16:33:09 /Users/phil/.emacs.d/tramp>
+;; -*- emacs-lisp -*- <13/08/07 11:11:55 /Users/phil/.emacs.d/tramp>
 ;; Tramp connection history.  Don't change this file.
 ;; You can delete it, forcing Tramp to reapply the checks.
 
-((["scp" "proudot" "sabre" nil]
-	("uname" "Linux 2.6.30.8-64.fc11.i686.PAE")
-	("test" "test")
-	("remote-path"
-	 ("/bin" "/usr/bin" "/usr/sbin" "/usr/local/bin"))
-	("remote-shell" "/bin/sh")
-	("~" "/udd/proudot")
-	("perl-file-spec" t)
-	("perl-cwd-realpath" t)
-	("perl" "\\perl5")
-	("stat" "\\stat")
-	("file-exists" "test -e")
-	("id" "/usr/bin/id")
-	("gid-integer" 29110)
-	("readlink" "\\readlink")
-	("local-encoding" base64-encode-region)
-	("local-decoding" base64-decode-region)
-	("remote-encoding" "base64")
-	("remote-decoding" "base64 -d")
-	("uid-integer" 4580))
- (["scp" "proudot" "titanic" nil]
+((["scp" "proudot" "titanic" nil]
 	("uname" "Linux 2.6.8-1.541smp")
 	("test" "test")
 	("remote-path"
@@ -318,22 +298,6 @@
 	("perl-file-spec" t)
 	("perl-cwd-realpath" t)
 	("perl" "\\perl"))
- (["scpc" nil "smb" nil]
-	nil)
- (["ssh" "proudot" "sabre" nil]
-	("uname" "Linux 3.1.9-1.fc16.x86_64")
-	("test" "test")
-	("remote-path"
-	 ("/bin" "/usr/bin" "/usr/sbin" "/usr/local/bin"))
-	("remote-shell" "/bin/sh")
-	("busybox" nil)
-	("file-exists" "test -e")
-	("tmpdir" "/ssh:proudot@sabre:/tmp")
-	("perl-file-spec" t)
-	("perl-cwd-realpath" t)
-	("perl" "\\perl"))
- (["scpc" nil "ssh" nil]
-	nil)
  (["ssh" "proudot" "igrida-oar-frontend" nil]
 	("uname" "Linux 2.6.32-5-amd64")
 	("test" "test")
@@ -360,4 +324,48 @@
 	("inline-compress" "gzip")
 	("inline-decompress" "gzip -d")
 	("uid-integer" 4580)
-	("gid-string" "serpico")))
+	("gid-string" "serpico"))
+ (["sshx" "proudot" "sabre" nil]
+	("uname" "Linux 3.1.9-1.fc16.x86_64")
+	("test" "test")
+	("remote-path"
+	 ("/bin" "/usr/bin" "/usr/sbin" "/usr/local/bin"))
+	("remote-shell" "/bin/sh")
+	("busybox" nil)
+	("~" "/udd/proudot")
+	("ls" "/bin/ls --color=never")
+	("ls-dired" t)
+	("stat" "\\stat")
+	("file-exists" "test -e")
+	("id" "/usr/bin/id")
+	("gid-integer" 29110)
+	("tmpdir" "/sshx:proudot@sabre:/tmp")
+	("readlink" "\\readlink")
+	("local-encoding" base64-encode-region)
+	("local-decoding" base64-decode-region)
+	("remote-encoding" "base64")
+	("remote-decoding" "base64 -d -i")
+	("perl-file-spec" t)
+	("perl-cwd-realpath" t)
+	("perl" "\\perl")
+	("gid-string" "serpico"))
+ ([#("scp" 0 3
+		 (org-attr nil))
+	 #("proudot" 0 7
+		 (org-attr nil))
+	 #("sabre" 0 5
+		 (org-attr nil))
+	 nil]
+	("uname" "Linux 3.1.9-1.fc16.x86_64")
+	("test" "test")
+	("remote-path"
+	 ("/bin" "/usr/bin" "/usr/sbin" "/usr/local/bin"))
+	("remote-shell" "/bin/sh")
+	("busybox" nil)
+	("readlink" "\\readlink")
+	("stat" "\\stat")
+	("file-exists" "test -e")
+	("ls" "/bin/ls --color=never")
+	("perl-file-spec" t)
+	("perl-cwd-realpath" t)
+	("perl" "\\perl")))
