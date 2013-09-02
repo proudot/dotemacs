@@ -246,7 +246,6 @@
 ;; (ac-set-trigger-key nil)
 ;; (setq ac-auto-start t)
 
-;; (global-auto-complete-mode nil)
 ;; (defun auto-complete-mode-maybe ()
 ;;   "No maybe for you. Only AC!"
 ;;   (unless (minibufferp (current-buffer))
@@ -336,7 +335,7 @@
 
 
 
-;; To the web !
+;; homemade webjump to avoid to much typing
 (defun prelude-google ()
   "Googles a query or region if any."
   (interactive)
@@ -348,8 +347,16 @@
       (read-string "Google: ")))))
 (global-set-key (kbd "C-x g") 'prelude-google)
 
-
-
+(defun prelude-scholar ()
+  "Scholar a query or region if any."
+  (interactive)
+  (browse-url
+   (concat
+    "http://scholar.google.fr/scholar?hl=us&q="
+    (if mark-active
+        (buffer-substring (region-beginning) (region-end))
+      (read-string "Scholar: ")))))
+(global-set-key (kbd "C-x s") 'prelude-scholar)
 
 ;; sending mail -- replace USERNAME with your gmail username
 ;; also, make sure the gnutls command line utils are installed
@@ -390,7 +397,7 @@
  '(comint-input-ignoredups t)
  '(comint-prompt-read-only t)
  '(default-justification (quote full))
- '(doc-view-continuous t)
+ '(doc-view-continuous nil)
  '(eshell-scroll-to-bottom-on-output (quote all))
  '(framepop-enable-keybinding "<f2>")
  '(fringe-mode 5 nil (fringe))
@@ -441,6 +448,7 @@ directory and insert a link to this file."
 	)
 
 (setq org-attach-store-link-p 'attached)
+(setq org-blank-before-new-entry (quote ((heading . nil) (plain-list-item . auto))))
 (setq org-highlight-latex-fragments-and-specials t)
 (global-set-key (kbd "C-c l") 'org-store-link)
 (setq org-file-apps
