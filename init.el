@@ -241,7 +241,6 @@
 ;; (setq-default ac-sources '(ac-source-abbrev ac-source-words-in-same-mode-buffers ac-source-words-in-buffer  ac-source-symbols ))
 ;; (ac-set-trigger-key nil)
 ;; (setq ac-auto-start t)
-
 ;; (defun auto-complete-mode-maybe ()
 ;;   "No maybe for you. Only AC!"
 ;;   (unless (minibufferp (current-buffer))
