@@ -527,8 +527,6 @@ directory and insert a link to this file."
 
 
 
-
-
 `
 (defun compile-tags ()
   "compile etags for the current project"

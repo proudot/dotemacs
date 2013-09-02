@@ -8,7 +8,7 @@
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; Fundamental mode related (every mode) ;;
+;; Fundamental mode (every mode)         ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (require 'uniquify)
 (setq uniquify-buffer-name-style 'reverse)
