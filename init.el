@@ -26,12 +26,14 @@
 ;; Mac osx
 
 ;; Frame size
-(setq default-frame-alist
+(when (string= system-name "mba-ph-roudot-wifi.irisa.fr")
+	(setq default-frame-alist
       '((top . 0) (left . 500)
         (width . 90) (height . 73)
-        (font . "Menlo-12")
+        (font . "Menlo-14")
         )
 			)
+	)
 
 ;; MacOSX stuff
 (setenv "PATH" (concat (getenv "PATH") ":/usr/texbin/:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/X11/bin:."))
