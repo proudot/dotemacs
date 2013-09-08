@@ -412,7 +412,7 @@
  '(jabber-roster-line-format "%c %-25n %u %-8s  %S")
  '(matlab-mode-install-path (quote ("/Volumes/data1/proudot/projets/heterogeneous_track/code_repo/" "/usr/local/MATLAB/R2012a/")))
  '(midnight-mode t nil (midnight))
- '(org-agenda-files (quote ("~/Dropbox/org_files/biblio.org" "~/Dropbox/org_files/these.org" "~/Dropbox/org_files/notes.org")))
+ '(org-agenda-files (quote ("~/Dropbox/org_files/these.org" "~/Dropbox/org_files/biblio.org" "~/Dropbox/org_files/notes.org")))
  '(org-blank-before-new-entry (quote ((heading . t) (plain-list-item . auto))))
  '(org-export-latex-classes (quote (("article" "\\documentclass[11pt]{article}" ("\\section{%s}" . "\\section*{%s}") ("\\subsection{%s}" . "\\subsection*{%s}") ("\\subsubsection{%s}" . "\\subsubsection*{%s}") ("\\paragraph{%s}" . "\\paragraph*{%s}") ("\\subparagraph{%s}" . "\\subparagraph*{%s}")) ("report" "\\documentclass[11pt]{report}" ("\\part{%s}" . "\\part*{%s}") ("\\chapter{%s}" . "\\chapter*{%s}") ("\\section{%s}" . "\\section*{%s}") ("\\subsection{%s}" . "\\subsection*{%s}") ("\\subsubsection{%s}" . "\\subsubsection*{%s}")) ("book" "\\documentclass[11pt]{book}" ("\\part{%s}" . "\\part*{%s}") ("\\chapter{%s}" . "\\chapter*{%s}") ("\\section{%s}" . "\\section*{%s}") ("\\subsection{%s}" . "\\subsection*{%s}") ("\\subsubsection{%s}" . "\\subsubsection*{%s}")) ("beamer" "\\documentclass{beamer}" org-beamer-sectioning) ("letter" "\\documentclass[12pt]{lettre}"))))
  '(org-modules (quote (org-bbdb org-bibtex org-docview org-gnus org-info org-jsinfo org-irc org-mew org-mhe org-rmail org-vm org-wl org-w3m org-mac-link-grabber)))
