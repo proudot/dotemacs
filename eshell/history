@@ -1,31 +1,3 @@
-cd ../aspell6-en-7.1-0/
-./configure 
-*sudo make install
-ssh phil@centrosome.inria.fr
-ssh phil@centrosome.inria.fr
-ssh proudot@sabre.inria.fr
-cd build/
-./simu_tcspc 
-make
-./simu_tcspc 
-./simu_tcspc 
-make ; ./simu_tcspc 
-make ; ./simu_tcspc 
-cd
-cd Downloads/
-unzip --usage
-unzip vbSPT_0.9_20130116.zip
-ls vbSPT/
-open vbSPT/vbSPT_userguide.pdf
-ssh centrosome
-ssh phil@centrosome
-rm CIMG4917.JPG CIMG4830.JPG 
-open TorBrowser_en-US.app/
-rm -rf ~/Library/Application\ Support/Skype/antoine69001
-clear
-rm -rf ~/Library/Application\ Support/Skype/antoine69001
-cd
-cd code/flimtrack/build/
 cmake ..
 make journal_micro
 port search gnutls
@@ -125,4 +97,32 @@ gmic P1020006.JPG  -cracks
 gmic P1020006.JPG  -texturize_paper
 gmic P1020006.JPG  -x_fisheye
 rm -rf ~/Library/Application\ Support/Skype/antoine69001
+ls
+ls
+cp ref_org.bib ..
+latexmk -c
+ls
+bibtex -help
+bibtex related_works.aux
+texexec 
+cp ref_org.bib ..
+latexmk -c
+ping zimbra.inria.fr
+ping zimbra.inria.fr
+ping zla.inria.fr
+ping zlb.inria.fr
+ping lemonde.fr
+ping http://www.lemonde.fr
+ping www.lemonde.fr
+ping www.zimbra.inria.fr
+ping mail.google.com
+rm -rf ~/Library/Application\ Support/Skype/antoine69001
+cd .matlab/R2010a/
+ls
+cd ..
+ls
+cd R2012b
+ls
+cd ../R2012a
+la
 ls
