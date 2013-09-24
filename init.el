@@ -362,7 +362,7 @@
 ;; also, make sure the gnutls command line utils are installed
 ;; package 'gnutls-bin' in Debian/Ubuntu
 
-(require 'smtpmail)
+;; (require 'smtpmail)
 ;; alternatively, for emacs-24 you can use:
 ;; (setq message-send-mail-function 'smtpmail-send-it
 ;;     smtpmail-stream-type 'starttls
