@@ -26,7 +26,11 @@
 ;; Mac osx
 
 ;; Frame size
-(when (string= system-name "mba-ph-roudot-wifi.irisa.fr")
+(when (or (string= system-name "mba-ph-roudot-wifi.irisa.fr")
+					(string= system-name "news-MacBook-Air.local")
+					)
+	(message "MBA config")
+	(setq locate-command "mdfind")
 	(setq default-frame-alist
       '((top . 0) (left . 500)
         (width . 90) (height . 73)
@@ -178,8 +182,6 @@
 )
 (package-initialize)
 
-
-
 ;;;;;;;;;;;;;;;;;;
 ;;  my modes    ;;
 ;;;;;;;;;;;;;;;;;;
@@ -196,7 +198,6 @@
 ;; Tramp
 (setq password-cache-expiry nil)
 
-
 ;; iFlipBuffer
 (require 'iflipb)
 
@@ -205,7 +206,6 @@
  (if (featurep 'xemacs) (kbd "<C-iso-left-tab>") (kbd "<C-S-iso-lefttab>"))
  'iflipb-previous-buffer)
 (set-default 'iflipb-ignore-buffers nil)
-
 
 ;; winner-mode is the window configuration history
 (winner-mode 1)
@@ -216,7 +216,6 @@
 (smex-initialize)
 (global-set-key (kbd "M-x") 'smex)
 (define-key ido-common-completion-map (kbd "TAB") 'ido-next-match)
-
 
 ;; yasnippet
 (add-to-list 'load-path
@@ -254,9 +253,9 @@
 
 
 ;; Pager
-;; (require 'pager)
-;; (global-set-key "\C-v"     'pager-page-down)
-;; (global-set-key "\M-v"      'pager-page-up)
+(require 'pager)
+(global-set-key "\C-v"     'pager-page-down)
+(global-set-key "\M-v"      'pager-page-up)
 
 (require 'frame-bufs)
 (frame-bufs-mode t)
@@ -365,12 +364,12 @@
 
 (require 'smtpmail)
 ;; alternatively, for emacs-24 you can use:
-(setq message-send-mail-function 'smtpmail-send-it
-    smtpmail-stream-type 'starttls
-    smtpmail-default-smtp-server "smtp.inria.fr"
-    smtpmail-smtp-server "smtp.inria.fr"
-		smtpmail-auth-credentials '(("smtp.inria.fr" 25 "proudot" "ifu#eu$a"))
-    smtpmail-smtp-service 25)
+;; (setq message-send-mail-function 'smtpmail-send-it
+;;     smtpmail-stream-type 'starttls
+;;     smtpmail-default-smtp-server "smtp.inria.fr"
+;;     smtpmail-smtp-server "smtp.inria.fr"
+;; 		smtpmail-auth-credentials '(("smtp.inria.fr" 25 "proudot" "........"))
+;;     smtpmail-smtp-service 25)
 
 
 ;; don't keep message buffers around
@@ -429,7 +428,7 @@
 					(lambda ()
 						(local-set-key (kbd "C-c C-h") 'my-screenshot)
 						(define-key org-mode-map [(control tab)] nil)
-						(define-key org-mode-map (kbd "C-c g") 'omlg-grab-link)						
+						(define-key org-mode-map (kbd "C-c g") 'omlg-grab-link)
 						)
 					)
 
@@ -501,11 +500,21 @@ directory and insert a link to this file."
 ;; Gtalk in emacs
 ;; (sometime usefull but chat is not always updated)
 (require 'jabber)
-(setq tls-program '("openssl s_client -connect %h:%p -no_ssl2 -no_ticket")) ; a hack
+;;(setq tls-program '("openssl s_client -connect %h:%p -no_ssl2 -no_ticket")) ; a hack
 (setq jabber-account-list
-			'(("philippe.roudot@gmail.com"
-				 (:network-server . "talk.google.com")
-				 (:connection-type . ssl))))
+			'(
+				;; ("philippe.roudot@gmail.com"
+				;;  (:network-server . "talk.google.com")
+				;;  (:connection-type . ssl))
+				("philippe.roudot@inria.fr"
+				 (:network-server . "jabber.inria.fr")
+				 (:connection-type . ssl)
+				 (:port . 5222)
+				)
+
+
+				)
+			)
 
 
 ;; (setq org-default-notes-file (concat org-directory "~/notes.org"))
@@ -658,3 +667,5 @@ directory and insert a link to this file."
  ;; If there is more than one, they won't work right.
  )
 
+(put 'ido-exit-minibuffer 'disabled nil)
+(put 'upcase-region 'disabled nil)

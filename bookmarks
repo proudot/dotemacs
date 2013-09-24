@@ -2,7 +2,12 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("fluo_simulator.hpp"
+(("not."
+ (filename . "~/serpico/documents/articles/2013-07-01_tpami13/iu-track-v1.tex")
+ (front-context-string . "\n% *** MY NOTATI")
+ (rear-context-string . "\\todo[inline]}\n\n")
+ (position . 1206))
+("fluo_simulator.hpp"
  (filename . "~/code/serpicodev/flimtrack/include/fluo_simulator.hpp")
  (front-context-string . "	cfl warping_vec")
  (rear-context-string . "is_empty()){\n			")
